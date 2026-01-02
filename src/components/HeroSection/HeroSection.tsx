@@ -84,7 +84,7 @@ export const HeroSection = () => {
         </motion.div>
       </motion.div>
 
-      {/* Right Section - GitHub Profile Image */}
+      {/* Right Section - Profile Image (Your Face) */}
       <motion.div
         className="flex-1 flex justify-center p-4 md:p-8"
         initial={{ opacity: 0, scale: 0.8, filter: "blur(10px)" }}
@@ -99,11 +99,11 @@ export const HeroSection = () => {
           {/* Glow effect */}
           <div className="absolute inset-0 rounded-full bg-gradient-to-br from-amber-500/20 via-transparent to-emerald-500/20 blur-2xl scale-125" />
 
-          {/* Image container - GitHub Avatar */}
+          {/* Image container - Your original face photo */}
           <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden ring-2 ring-neutral-800">
             <img
-              src="https://avatars.githubusercontent.com/u/205114094?v=4"
-              alt="Arief Fajar - GitHub"
+              src="https://storage.cloud.google.com/theportfolio/drive-download-20260102T182306Z-1-001/IMG_20251225_182356_918.webp"
+              alt="Arief Fajar"
               className="w-full h-full object-cover"
               loading="eager"
             />
