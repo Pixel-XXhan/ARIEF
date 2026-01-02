@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+}
+
+@import "./components/lightswind.css";
+
+@font-face {
+  font-family: "Geist Sans";
+  src: url("../node_modules/@vercel/fonts/geist-sans/GeistSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist Sans";
+  src: url("../node_modules/@vercel/fonts/geist-sans/GeistSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist Sans";
+  src: url("../node_modules/@vercel/fonts/geist-sans/GeistSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  font-family: "Geist Sans", sans-serif !important;
+}
+
+/* ================== DARK THEME (default) ================== */
+.dark .app-container,
+html.dark body {
+  background-color: #0a0a0a !important;
+  color: #ffffff;
+}
+
+/* ================== LIGHT THEME ================== */
+html:not(.dark) body,
+html:not(.dark) .app-container {
+  background-color: #fafafa !important;
+  color: #0a0a0a;
+}
+
+/* Light theme - Main backgrounds */
+html:not(.dark) .bg-neutral-950,
+html:not(.dark) .bg-neutral-900\/50,
+html:not(.dark) .bg-neutral-900\/30,
+html:not(.dark) .bg-neutral-900\/20 {
+  background-color: rgba(245, 245, 245, 0.9) !important;
+}
+
+html:not(.dark) .bg-neutral-900 {
+  background-color: #f0f0f0 !important;
+}
+
+html:not(.dark) .bg-neutral-800,
+html:not(.dark) .bg-neutral-800\/80 {
+  background-color: #e5e5e5 !important;
+}
+
+/* Light theme - Text colors */
+html:not(.dark) .text-white {
+  color: #0a0a0a !important;
+}
+
+html:not(.dark) .text-neutral-100,
+html:not(.dark) .text-neutral-200 {
+  color: #171717 !important;
+}
+
+html:not(.dark) .text-neutral-300 {
+  color: #262626 !important;
+}
+
+html:not(.dark) .text-neutral-400 {
+  color: #404040 !important;
+}
+
+html:not(.dark) .text-neutral-500 {
+  color: #525252 !important;
+}
+
+/* Light theme - Borders */
+html:not(.dark) .border-neutral-800,
+html:not(.dark) .border-neutral-700,
+html:not(.dark) .border-neutral-700\/50 {
+  border-color: #d4d4d4 !important;
+}
+
+/* Light theme - Header/Nav fix */
+html:not(.dark) header .bg-neutral-900\/80,
+html:not(.dark) .bg-neutral-900\/80 {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(12px);
+}
+
+html:not(.dark) header .border-neutral-800 {
+  border-color: #e5e5e5 !important;
+}
+
+html:not(.dark) header a,
+html:not(.dark) header .text-white,
+html:not(.dark) header .text-neutral-400 {
+  color: #171717 !important;
+}
+
+html:not(.dark) header .text-neutral-400:hover {
+  color: #0a0a0a !important;
+}
+
+/* Light theme - Cards and containers */
+html:not(.dark) .ring-neutral-800 {
+  --tw-ring-color: #d4d4d4 !important;
+}
+
+html:not(.dark) .ring-amber-500\/30 {
+  --tw-ring-color: rgba(245, 158, 11, 0.4) !important;
+}
+
+/* Light theme - Amber accents stay visible */
+html:not(.dark) .text-amber-400 {
+  color: #d97706 !important;
+}
+
+html:not(.dark) .text-amber-500 {
+  color: #b45309 !important;
+}
+
+html:not(.dark) .bg-amber-500\/10,
+html:not(.dark) .bg-amber-500\/15,
+html:not(.dark) .bg-amber-500\/20 {
+  background-color: rgba(245, 158, 11, 0.15) !important;
+}
+
+html:not(.dark) .border-amber-500\/20,
+html:not(.dark) .border-amber-500\/30 {
+  border-color: rgba(217, 119, 6, 0.4) !important;
+}
+
+/* Light theme - Skill chips visibility */
+html:not(.dark) .bg-white\/5 {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+html:not(.dark) .border-white\/10 {
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Light theme - Striped background */
+html:not(.dark) .StripedBackground {
+  opacity: 0.1 !important;
+}
+
+/* Light theme - Footer */
+html:not(.dark) footer {
+  border-color: #e5e5e5 !important;
+}
