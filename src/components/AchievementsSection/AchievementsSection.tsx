@@ -72,7 +72,7 @@ export const AchievementsSection = () => {
     return (
         <motion.section
             id="achievements"
-            className="py-20 px-6 space-y-12"
+            className="py-16 md:py-20 px-4 md:px-6 space-y-10 md:space-y-12"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
@@ -80,7 +80,7 @@ export const AchievementsSection = () => {
         >
             {/* Header */}
             <motion.h2
-                className="text-3xl font-bold"
+                className="text-2xl md:text-3xl font-bold"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -90,22 +90,22 @@ export const AchievementsSection = () => {
             </motion.h2>
 
             {/* Achievement Cards */}
-            <div className="space-y-16">
+            <div className="space-y-12 md:space-y-16">
                 {achievements.map((achievement, idx) => (
                     <motion.div
                         key={achievement.title}
-                        className="space-y-6"
+                        className="space-y-5 md:space-y-6 p-4 md:p-6 rounded-2xl bg-neutral-900/30 border border-neutral-800"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: idx * 0.1 }}
                         viewport={{ once: true }}
                     >
-                        {/* Title & Info */}
-                        <div className="flex flex-wrap items-start gap-4">
-                            <div className="flex-1 min-w-[200px]">
-                                <h3 className="text-xl font-semibold">{achievement.title}</h3>
-                                <p className="text-sm text-neutral-400 mt-1">{achievement.description}</p>
-                                <div className="flex flex-wrap gap-2 mt-3">
+                        {/* Title & Info - Mobile stacked, Desktop side by side */}
+                        <div className="space-y-4 md:space-y-0 md:flex md:justify-between md:items-start">
+                            <div className="space-y-2">
+                                <h3 className="text-lg md:text-xl font-semibold">{achievement.title}</h3>
+                                <p className="text-sm text-neutral-400">{achievement.description}</p>
+                                <div className="flex flex-wrap gap-2 pt-1">
                                     <span className={`text-xs px-3 py-1 rounded-full border ${getColorClasses(achievement.color)}`}>
                                         {achievement.result}
                                     </span>
@@ -114,17 +114,17 @@ export const AchievementsSection = () => {
                                     </span>
                                 </div>
                             </div>
-                            <div className="text-right space-y-1">
+                            <div className="md:text-right space-y-1">
                                 <p className="text-xs text-neutral-500">Project</p>
                                 <p className="text-sm font-medium text-neutral-300">{achievement.project}</p>
-                                <p className="text-xs text-neutral-500 mt-2">
+                                <p className="text-xs text-neutral-500 pt-1">
                                     {achievement.team.join(", ")}
                                 </p>
                             </div>
                         </div>
 
                         {/* Image Gallery */}
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
                             {achievement.images.map((img, imgIdx) => (
                                 <motion.div
                                     key={imgIdx}
@@ -146,7 +146,7 @@ export const AchievementsSection = () => {
                         {achievement.certificate && (
                             <button
                                 onClick={() => setShowCertificate(achievement.certificate)}
-                                className="text-xs text-neutral-400 hover:text-white underline underline-offset-4 transition-colors"
+                                className="text-sm text-amber-400 hover:text-amber-300 underline underline-offset-4 transition-colors"
                             >
                                 Lihat Sertifikat
                             </button>
@@ -167,6 +167,7 @@ export const AchievementsSection = () => {
                         src={selectedImage}
                         alt="Preview"
                         className="max-w-full max-h-full object-contain rounded-lg"
+                        loading="lazy"
                     />
                 </motion.div>
             )}
@@ -183,6 +184,7 @@ export const AchievementsSection = () => {
                         src={showCertificate}
                         alt="Certificate"
                         className="max-w-full max-h-full object-contain rounded-lg"
+                        loading="lazy"
                     />
                 </motion.div>
             )}

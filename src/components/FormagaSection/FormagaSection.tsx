@@ -26,16 +26,16 @@ export const FormagaSection = () => {
     return (
         <motion.section
             id="formaga"
-            className="py-20 px-6 space-y-10"
+            className="py-16 md:py-20 px-4 md:px-6 space-y-8 md:space-y-10"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true, amount: 0.1 }}
         >
             {/* Header */}
-            <div className="max-w-2xl space-y-4">
+            <div className="space-y-3 text-center md:text-left">
                 <motion.h2
-                    className="text-3xl font-bold"
+                    className="text-2xl md:text-3xl font-bold"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
@@ -44,7 +44,7 @@ export const FormagaSection = () => {
                     Forum Anak Margahayu
                 </motion.h2>
                 <motion.p
-                    className="text-amber-400 text-sm font-medium"
+                    className="text-amber-400 text-sm md:text-base font-medium"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.1 }}
@@ -55,16 +55,16 @@ export const FormagaSection = () => {
             </div>
 
             {/* Description Cards */}
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-4 md:gap-6">
                 <motion.div
-                    className="p-6 rounded-xl bg-neutral-900/50 border border-neutral-800 space-y-3"
+                    className="p-5 md:p-6 rounded-xl bg-neutral-900/50 border border-neutral-800 space-y-3"
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5 }}
                     viewport={{ once: true }}
                 >
-                    <h3 className="text-sm font-semibold text-neutral-200">Apa itu Forum Anak?</h3>
-                    <p className="text-xs text-neutral-500 leading-relaxed">
+                    <h3 className="text-base md:text-lg font-semibold text-neutral-200">Apa itu Forum Anak?</h3>
+                    <p className="text-sm md:text-base text-neutral-400 leading-relaxed">
                         Forum Anak adalah wadah partisipasi anak dalam proses pembangunan
                         di tingkat desa, kecamatan, hingga nasional. Forum ini menjadi
                         tempat anak-anak menyuarakan aspirasi dan mengembangkan
@@ -73,14 +73,14 @@ export const FormagaSection = () => {
                 </motion.div>
 
                 <motion.div
-                    className="p-6 rounded-xl bg-neutral-900/50 border border-neutral-800 space-y-3"
+                    className="p-5 md:p-6 rounded-xl bg-neutral-900/50 border border-neutral-800 space-y-3"
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: 0.1 }}
                     viewport={{ once: true }}
                 >
-                    <h3 className="text-sm font-semibold text-neutral-200">Sistem Klaster</h3>
-                    <p className="text-xs text-neutral-500 leading-relaxed">
+                    <h3 className="text-base md:text-lg font-semibold text-neutral-200">Sistem Klaster</h3>
+                    <p className="text-sm md:text-base text-neutral-400 leading-relaxed">
                         Klaster adalah pembagian fokus kerja Forum Anak berdasarkan
                         isu-isu penting. Sebagai Ketua Klaster 5, saya memimpin
                         tim dalam mengadvokasi dan menjalankan program-program
@@ -90,7 +90,7 @@ export const FormagaSection = () => {
             </div>
 
             {/* Gallery */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
                 {galleryImages.map((img, idx) => (
                     <motion.div
                         key={idx}
